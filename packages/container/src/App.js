@@ -6,5 +6,5 @@ export default () => {
         <div>
             <MarketingApp />
         </div>
-    )
+    );
 };
