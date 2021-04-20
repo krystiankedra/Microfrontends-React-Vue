@@ -1,0 +1,21 @@
+name: deploy-marketing
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'packages/marketing/**'
+
+defaults:
+  run:
+    working-directory: packages/marketing
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - run: npm run build
